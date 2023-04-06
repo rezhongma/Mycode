@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>警告组件</title>
+    <link rel="stylesheet" href="../js/element-ui/lib/theme-chalk/index.css">
+    <script src="../js/vue.js"></script>
+    <script src="../js/element-ui/lib/index.js"></script>
+</head>
+<body>
+<div id="app">
+    <el-button type="danger" icon="el-icon-delete" @click="open">打开警告框</el-button>
+</div>
+<script>
+    new Vue({
+        el: "#app",
+        data: {},
+        methods:{
+            open() {
+                this.$alert("警告框的内容","标题");
+            }
+        }
+    })
+</script>
+</body>
+</html>

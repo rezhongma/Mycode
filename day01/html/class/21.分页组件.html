@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>分页组件</title>
+    <link rel="stylesheet" href="../js/element-ui/lib/theme-chalk/index.css">
+    <script src="../js/vue.js"></script>
+    <script src="../js/element-ui/lib/index.js"></script>
+</head>
+<body>
+<div id="app">
+    <!--
+       layout: 分页布局:要显示哪些分页元素
+       total:总记录数
+       current-page:当前页
+       page-size:每页显示条数
+       page-sizes:每页显示条数选择
+       background:背景 
+     -->
+    <el-pagination
+        :total="total"
+        :current-page="pageNum"
+        :page-size="pageSize"
+        :page-sizes="pageSizes"
+        layout="total,sizes, prev, pager, next, jumper"
+        background
+    >
+
+    </el-pagination>
+</div>
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            /*总记录数*/
+            total:1,
+            /*当前页码*/
+            pageNum:1,
+            /*每页显示的条数*/
+            pageSize:2,
+            /*每页显示条数的选择: 2,4,8,10*/
+            pageSizes:[2,4,8,10]
+
+
+        }
+    })
+</script>
+</body>
+</html>

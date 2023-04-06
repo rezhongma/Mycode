@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../js/element-ui/lib/theme-chalk/index.css">
+    <script src="../js/vue.js"></script>
+    <script src="../js/element-ui/lib/index.js"></script>
+</head>
+<body>
+<div id="app">
+    <el-checkbox-group v-model="hobby">
+        <el-checkbox :label="1">爱好</el-checkbox>
+        <el-checkbox :label="2">游泳</el-checkbox>
+        <el-checkbox :label="3">打游戏</el-checkbox>
+    </el-checkbox-group>
+</div>
+<script>
+    let v = new Vue({
+        el: "#app",
+        data: {
+            hobby:[1,2,3]
+        },
+        methods: {}
+    })
+</script>
+</body>
+</html>

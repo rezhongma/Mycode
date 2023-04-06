@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>对话框组件</title>
+    <link rel="stylesheet" href="../js/element-ui/lib/theme-chalk/index.css">
+    <script src="../js/vue.js"></script>
+    <script src="../js/element-ui/lib/index.js"></script>
+</head>
+<body>
+<div id="app">
+    <!--按钮-->
+    <el-button type="primary" icon="el-icon-check" @click="flag=!flag">打开对话框组件</el-button>
+    <!--对话框组件-->
+    <el-dialog v-bind:visible.sync="flag" title="对话框的标题">
+        对话框的消息内容
+    </el-dialog>
+</div>
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            flag:false,
+        },
+        methods:{
+
+        }
+    })
+</script>
+</body>
+</html>

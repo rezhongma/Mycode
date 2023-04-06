@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>信息组件</title>
+    <link rel="stylesheet" href="../js/element-ui/lib/theme-chalk/index.css">
+    <script src="../js/vue.js"></script>
+    <script src="../js/element-ui/lib/index.js"></script>
+</head>
+<body>
+<div id="app">
+    <el-button type="primary" icon="el-icon-open" @click="open">打开一个信息框</el-button>
+</div>
+<script>
+    new Vue({
+        el: "#app",
+        data: {},
+        methods:{
+            /*打开信息框*/
+            open() {
+               this.$message({
+                   /*显示关闭信息框*/
+                   showClose:true,
+                   message:"我是消息框中的内容",
+                   /*指定消息类型  info: 消息类型框  success:成功消息类型框 */
+                   type:"warning"
+               })
+            },
+        }
+    })
+</script>
+</body>
+</html>

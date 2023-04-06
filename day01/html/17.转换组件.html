@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../js/element-ui/lib/theme-chalk/index.css">
+    <script src="../js/vue.js"></script>
+    <script src="../js/element-ui/lib/index.js"></script>
+</head>
+<body>
+<div id="app">
+    <el-switch v-model="flag"></el-switch>
+    <hr>
+    <el-switch v-model="flag2" active-text="已婚" inactive-text="未婚"></el-switch>
+</div>
+<script>
+    let v = new Vue({
+        el: "#app",
+        data: {
+            flag:false,
+            flag2:true
+        },
+        methods: {}
+    })
+</script>
+</body>
+</html>

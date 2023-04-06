@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link rel="stylesheet" href="../js/element-ui/lib/theme-chalk/index.css">
+    <script src="../js/vue.js"></script>
+  <script src="../js/element-ui/lib/index.js"></script>
+
+
+</head>
+<body>
+     <div id="app">
+         <el-button type="danger" icon="el-icon-delete" @click="open">删除</el-button>
+     </div>
+<script>
+    let v=new Vue({
+        el:"#app",
+        data:{},
+        methods:{
+            open(){
+                this.$confirm('是否确认？','提示',{
+                    confirmButtonText:'确认',
+                    cancelButtonClass:'取消',
+                    type:'warning'
+                }).then(() => {
+                    this.$message({
+                        type: 'success',
+                        message: '删除成功!'
+                    });
+                }).catch(() => {
+                    this.$message({
+                        type: 'info',
+                        message: '已取消删除'
+                    });
+                });
+                }
+        }
+    })
+</script>
+</body>
+</html>

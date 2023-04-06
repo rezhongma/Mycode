@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../js/element-ui/lib/theme-chalk/index.css">
+    <script src="../js/vue.js"></script>
+    <script src="../js/element-ui/lib/index.js"></script>
+</head>
+<body>
+<div id="app">
+        <el-tree :data="dataList" show-checkbox></el-tree>
+</div>
+<script>
+    let v = new Vue({
+        el: "#app",
+        data: {
+            dataList:[
+                {id:10010,label:"会员管理"},
+                {
+                    id:10011,
+                    label:"用户管理",
+                    children:[
+                        {
+                            id:1,
+                            label:"大人管理",
+                            children: [
+                                {id:33,label:"男人管理"},
+                                {id:34,label:"女人管理"}
+                            ]
+                        },
+                        {id:2,label:"小孩管理"}
+                    ]
+                },
+                {id:10011,label:"物流管理"}
+            ]
+        },
+        methods: {}
+    })
+</script>
+</body>
+</html>

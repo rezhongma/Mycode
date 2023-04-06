@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表格组件</title>
+    <link rel="stylesheet" href="../js/element-ui/lib/theme-chalk/index.css">
+    <script src="../js/vue.js"></script>
+    <script src="../js/element-ui/lib/index.js"></script>
+</head>
+<body>
+<div id="app">
+    <el-table :data="userList" border>
+        <!--
+          type属性值: selection :选项  会显示一个复选框
+                      index : 索引
+          align: 对齐方式 center:居中
+          label:表格列标题
+        -->
+        <el-table-column type="selection" align="center"></el-table-column>
+        <el-table-column type="index" align="center"></el-table-column>
+        <el-table-column label="主键" align="center" prop="id"></el-table-column>
+        <el-table-column label="姓名" align="center" prop="uname"></el-table-column>
+        <el-table-column label="性别" align="center" prop="sex" :formatter="sexFmt"></el-table-column>
+        <el-table-column label="手机" align="center" prop="tel"></el-table-column>
+        <el-table-column label="职业" align="center" prop="profession"></el-table-column>
+        <el-table-column label="薪资" align="center" prop="sal" :formatter="salFmt"></el-table-column>
+    </el-table>
+</div>
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            /*定义表格中的数据*/
+            userList:[
+                {id:10010,uname:"张三",sex:"1",tel:"13354676567",profession:"程序猿",sal:2852.24},
+                {id:10011,uname:"李四",sex:"0",tel:"13354676590",profession:"攻城狮",sal:3000},
+                {id:10012,uname:"王五",sex:"1",tel:"13354676545",profession:"码龙",sal:4000},
+                {id:10013,uname:"赵二",sex:"0",tel:"13354676577",profession:"程序猿",sal:2299}
+            ],
+        },
+        methods:{
+            /*性别格式化*/
+            sexFmt(row) {
+                return row.sex==="1"?"男":"女";
+            },
+            /*薪资格式化*/
+            salFmt(row) {
+                return "￥"+row.sal.toFixed(2);
+            },
+        }
+    })
+</script>
+</body>
+</html>

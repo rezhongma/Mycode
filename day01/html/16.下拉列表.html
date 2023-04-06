@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../js/element-ui/lib/theme-chalk/index.css">
+    <script src="../js/vue.js"></script>
+    <script src="../js/element-ui/lib/index.js"></script>
+</head>
+<body>
+<div id="app">
+    <el-select v-model="profession">
+        <el-option-group>
+            <el-option label="湖南" value="1"></el-option>
+            <el-option label="湖北" value="2"></el-option>
+            <el-option label="福建" value="3"></el-option>
+        </el-option-group>
+    </el-select>
+</div>
+<script>
+    let v = new Vue({
+        el: "#app",
+        data: {
+            profession:"1"
+        },
+        methods: {}
+    })
+</script>
+</body>
+</html>

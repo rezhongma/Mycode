@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../js/element-ui/lib/theme-chalk/index.css">
+    <script src="../js/vue.js"></script>
+    <script src="../js/element-ui/lib/index.js"></script>
+</head>
+<body>
+<div id="app">
+<el-pagination
+     :total="total"
+     :current-page="pageNum"
+     :page-size="pageSize"
+     :page-sizes="pageSizes"
+     layout=" total,sizes, prev, pager, next, jumper"
+     background="true"
+>
+
+</el-pagination>
+</div>
+<script>
+    let v = new Vue({
+        el: "#app",
+        data: {
+            /*总条数*/
+            total:1,
+            /*当前页码*/
+            pageNum:1,
+            /*每页显示条数*/
+            pageSize:2,
+            /*每页显示条数选项*/
+            pageSizes:[2,4,8,10]
+        },
+        methods: {}
+    })
+</script>
+</body>
+</html>

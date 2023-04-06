@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>XX组件</title>
+    <link rel="stylesheet" href="../js/element-ui/lib/theme-chalk/index.css">
+    <script src="../js/vue.js"></script>
+    <script src="../js/element-ui/lib/index.js"></script>
+</head>
+<body>
+<div id="app">
+    <!--
+       container: 容器
+    -->
+    <el-container>
+        <!--头部-->
+        <el-header style="height: 100px;background: red;">北丐</el-header>
+        <el-container>
+            <!--边角-->
+            <el-aside style="width: 100px;background:blue;">西毒</el-aside>
+            <!--主要部分-->
+            <el-main style="height:800px;background:#ff7300;">中神通</el-main>
+            <el-aside style="width: 100px;background:orange;">东邪</el-aside>
+        </el-container>
+        <!--脚-->
+        <el-footer style="height: 100px;background:green;">南帝</el-footer>
+    </el-container>
+</div>
+<script>
+    new Vue({
+        el: "#app",
+        data: {}
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>按钮组件</title>
+    <link rel="stylesheet" href="../js/element-ui/lib/theme-chalk/index.css">
+    <script src="../js/vue.js"></script>
+    <script src="../js/element-ui/lib/index.js"></script>
+</head>
+<body>
+<div id="app">
+    <!--
+      type: text: 文本
+            danger:危险
+            success:成功
+            info:信息
+            primary:主要
+            warning:警告
+    -->
+    <el-button type="text">文本按钮</el-button>
+    <el-button type="danger">文本按钮</el-button>
+    <el-button type="success">文本按钮</el-button>
+    <el-button type="info">文本按钮</el-button>
+    <el-button type="primary">文本按钮</el-button>
+    <el-button type="warning">文本按钮</el-button>
+
+    <div style="margin:15px;"></div>
+
+    <!--按钮+图标-->
+    <el-button type="text" icon="el-icon-plus">文本按钮</el-button>
+    <el-button type="danger" icon="el-icon-delete">删除</el-button>
+    <el-button type="success" icon="el-icon-check">提交</el-button>
+    <el-button type="info" icon="el-icon-close">取消</el-button>
+    <el-button type="primary" icon="el-icon-search">搜索</el-button>
+    <el-button type="warning" icon="el-icon-edit">编辑</el-button>
+    <el-button type="warning" icon="el-icon-reading">查询</el-button>
+    <el-button type="warning" icon="el-icon-upload">上传</el-button>
+
+    <!--圆角按钮-->
+    <div style="margin:15px;"></div>
+    <el-button type="text" icon="el-icon-plus" round>文本按钮</el-button>
+    <el-button type="danger" icon="el-icon-delete" round>删除</el-button>
+    <el-button type="success" icon="el-icon-check" round>提交</el-button>
+    <el-button type="info" icon="el-icon-close" round>取消</el-button>
+    <el-button type="primary" icon="el-icon-search" round>搜索</el-button>
+
+    <!--正圆按钮-->
+    <div style="margin:15px;"></div>
+    <el-button type="text" icon="el-icon-plus" circle>文本按钮</el-button>
+    <el-button type="danger" icon="el-icon-delete" circle></el-button>
+    <el-button type="success" icon="el-icon-check" circle></el-button>
+    <el-button type="info" icon="el-icon-close" circle></el-button>
+    <el-button type="primary" icon="el-icon-search" circle>搜索</el-button>
+
+    <div style="margin:15px;"></div>
+    <!--设置按钮尺寸-->
+    <el-button type="text" icon="el-icon-plus">文本按钮</el-button>
+    <el-button type="danger" icon="el-icon-delete">删除</el-button>
+    <el-button type="danger" icon="el-icon-delete" size="medium">删除</el-button>
+    <el-button type="danger" icon="el-icon-delete" size="small">删除</el-button>
+    <el-button type="danger" icon="el-icon-delete" size="mini">删除</el-button>
+
+</div>
+<script>
+    new Vue({
+        el: "#app",
+        data: {}
+    })
+</script>
+</body>
+</html>
